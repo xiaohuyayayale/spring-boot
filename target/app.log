@@ -1,0 +1,57 @@
+2019-04-01 17:20:45.199  INFO 22272 --- [main] cn.devmgr.tutorial.Application           : Starting Application on LAPTOP-AKH8JAHL with PID 22272 (D:\Users\tiger\Desktop\tutorial-master\section-01\target\classes started by tiger in D:\Users\tiger\Desktop\tutorial-master\section-01)
+2019-04-01 17:20:45.202 DEBUG 22272 --- [main] cn.devmgr.tutorial.Application           : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-04-01 17:20:45.203  INFO 22272 --- [main] cn.devmgr.tutorial.Application           : No active profile set, falling back to default profiles: default
+2019-04-01 17:20:47.647 ERROR 22272 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:255) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at cn.devmgr.tutorial.Application.main(Application.java:10) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1021) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_71]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_71]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_71]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_71]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_71]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	... 14 common frames omitted
+
+2019-04-01 17:20:47.661 ERROR 22272 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-04-01 17:22:15.956  INFO 19460 --- [main] cn.devmgr.tutorial.Application           : Starting Application on LAPTOP-AKH8JAHL with PID 19460 (D:\Users\tiger\Desktop\tutorial-master\section-01\target\classes started by tiger in D:\Users\tiger\Desktop\tutorial-master\section-01)
+2019-04-01 17:22:15.961 DEBUG 19460 --- [main] cn.devmgr.tutorial.Application           : Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE
+2019-04-01 17:22:15.962  INFO 19460 --- [main] cn.devmgr.tutorial.Application           : No active profile set, falling back to default profiles: default
+2019-04-01 17:22:18.283  INFO 19460 --- [main] cn.devmgr.tutorial.Application           : Started Application in 2.706 seconds (JVM running for 3.637)
+2019-04-01 17:23:21.865 TRACE 19460 --- [http-nio-8080-exec-1] cn.devmgr.tutorial.TvSeriesController    : getAll() 
+2019-04-01 17:28:44.448 TRACE 19460 --- [http-nio-8080-exec-5] cn.devmgr.tutorial.TvSeriesController    : getAll() 
+2019-04-01 18:01:33.077 TRACE 19460 --- [http-nio-8080-exec-5] cn.devmgr.tutorial.TvSeriesController    : getAll() 
